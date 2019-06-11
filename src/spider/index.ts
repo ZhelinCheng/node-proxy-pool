@@ -11,11 +11,11 @@ let website: string[] = glob.sync(path.join(__dirname, './website/[a-z]*.js'))
 
 export default async function () {
   try {
-    let rq: Function[] = []
+    /*let rq: Function[] = []
     for (let uri of website) {
       rq.push(require(uri)())
     }
-    let data = await Promise.all(rq)
+    let data = await Promise.all(rq)*/
 
     /*let arr: Structure[] = []
     for (let item: Structure[] of data) {
@@ -23,14 +23,14 @@ export default async function () {
     }*/
 
     // console.log(...data)
-    let arr: any = []
+    /*let arr: any = []
     data.forEach(function (item) {
       arr = arr.concat(arr, item)
     })
 
-    console.log(arr.length)
+    console.log(arr.length)*/
 
-    // let data = await require('./website/66ip')()
+    let data = await require('./website/_quanwang')()
     // console.log(data)
   } catch (e) {
     console.error(e)
